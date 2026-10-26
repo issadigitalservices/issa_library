@@ -231,7 +231,7 @@
     showToast.timer = setTimeout(() => toast.classList.remove("show"), 4000);
   }
 
-  function renderવિષയങ്ങൾ() {
+  function renderവിഷയങ്ങൾ() {
     $("subjects").innerHTML = subjects.map(s => {
       const count = recordings.filter(r => r.subjectId === s.id).length;
       return `<button type="button" class="subject-button ${selectedവിഷയം === s.id ? "active" : ""}" data-subject="${escapeHtml(s.id)}">
