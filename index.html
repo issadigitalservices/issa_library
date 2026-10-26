@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="ml">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10231f">
-  <title>Voice Library</title>
+  <meta name="description" content="ISSA Kuttyalm - WhatsApp ശബ്ദ സന്ദേശങ്ങൾ വിഷയങ്ങൾ അനുസരിച്ച് സൂക്ഷിക്കാനും കേൾക്കാനും ഉള്ള ലൈബ്രറി">
+  <title>ISSA Kuttyalm - ശബ്ദ ലൈബ്രറി</title>
   <style>
     :root {
       --bg: #f5f7f6; --panel: #fff; --ink: #172522; --muted: #66736f;
@@ -115,98 +116,98 @@
 <body>
 <div class="app">
   <header class="topbar">
-    <div class="brand"><div class="brand-mark">♫</div><span>Voice Library</span></div>
-    <div class="top-note">A shared archive for useful conversations<br>Audio-first · Organized by topic</div>
+    <div class="brand"><div class="brand-mark">♫</div><span>ISSA Kuttyalm</span></div>
+    <div class="top-note">പ്രധാനപ്പെട്ട സംഭാഷണങ്ങളുടെ ശേഖരം<br>വിഷയങ്ങൾ അനുസരിച്ച് ക്രമീകരിച്ച ശബ്ദ സന്ദേശങ്ങൾ</div>
   </header>
 
   <main class="container">
     <section class="hero">
       <div>
-        <h1>Your group’s ideas, easy to find.</h1>
-        <p class="sub">Keep WhatsApp voice messages organized by subject and discussion date, so you can come back to them whenever you need.</p>
+        <h1>നിങ്ങളുടെ ഗ്രൂപ്പിലെ ആശയങ്ങൾ ഇനി എളുപ്പത്തിൽ കണ്ടെത്താം.</h1>
+        <p class="sub">WhatsApp ശബ്ദ സന്ദേശങ്ങൾ വിഷയം, തീയതി എന്നിവ അനുസരിച്ച് ക്രമീകരിച്ച് സൂക്ഷിക്കാം. ആവശ്യമുള്ളപ്പോൾ വീണ്ടും കേൾക്കാം.</p>
       </div>
-      <div class="pill"><span class="dot"></span> Prototype — local preview only</div>
+      <div class="pill"><span class="dot"></span> പരീക്ഷണ പതിപ്പ് — ഇപ്പോൾ ഈ ബ്രൗസറിൽ മാത്രം</div>
     </section>
 
     <section class="stats" aria-label="Library statistics">
-      <div class="stat"><div class="stat-label">Subjects</div><div class="stat-number" id="statSubjects">4</div></div>
-      <div class="stat"><div class="stat-label">Voice notes in this session</div><div class="stat-number" id="statRecordings">0</div></div>
-      <div class="stat"><div class="stat-label">Selected subject</div><div class="stat-number" id="statCurrent" style="font-size:19px">Career Development</div></div>
+      <div class="stat"><div class="stat-label">വിഷയങ്ങൾ</div><div class="stat-number" id="statവിഷയങ്ങൾ">4</div></div>
+      <div class="stat"><div class="stat-label">ശബ്ദ സന്ദേശങ്ങൾ</div><div class="stat-number" id="statRecordings">0</div></div>
+      <div class="stat"><div class="stat-label">തിരഞ്ഞെടുത്ത വിഷയം</div><div class="stat-number" id="statCurrent" style="font-size:19px">കരിയർ വികസനം</div></div>
     </section>
 
     <div class="layout">
       <aside class="panel">
-        <h2>Browse subjects</h2>
-        <nav class="subjects" id="subjects" aria-label="Subjects"></nav>
-        <div class="privacy-note">🔒 Shared access and sign-in will be connected during backend setup. This starter page does not yet protect or sync recordings.</div>
+        <h2>വിഷയങ്ങൾ തിരഞ്ഞെടുക്കുക</h2>
+        <nav class="subjects" id="subjects" aria-label="വിഷയങ്ങൾ"></nav>
+        <div class="privacy-note">🔒 അംഗങ്ങൾക്കുള്ള ലോഗിനും പങ്കിട്ട ആക്‌സസും അടുത്ത ഘട്ടത്തിൽ സജ്ജീകരിക്കും. ഇപ്പോഴത്തെ പതിപ്പിൽ റെക്കോർഡിങ്ങുകൾ സുരക്ഷിതമായി പങ്കിടാനോ ഓൺലൈനിൽ സൂക്ഷിക്കാനോ കഴിയില്ല.</div>
       </aside>
 
       <section class="panel main-panel">
         <div class="toolbar">
-          <h2 id="sectionTitle">Career Development</h2>
+          <h2 id="sectionTitle">കരിയർ വികസനം</h2>
           <div class="actions">
-            <button class="btn" id="newSubjectBtn" type="button">＋ Subject</button>
-            <button class="btn primary" id="uploadBtn" type="button">＋ Add voice notes</button>
+            <button class="btn" id="newവിഷയംBtn" type="button">＋ വിഷയം ചേർക്കുക</button>
+            <button class="btn primary" id="uploadBtn" type="button">＋ ശബ്ദ സന്ദേശങ്ങൾ ചേർക്കുക</button>
           </div>
         </div>
         <div class="search-row">
-          <div class="search"><input id="searchInput" type="search" placeholder="Search titles or descriptions…" aria-label="Search voice notes"></div>
+          <div class="search"><input id="searchInput" type="search" placeholder="പേരോ വിവരണങ്ങളോ തിരയുക…" aria-label="Search voice notes"></div>
           <select class="filter-select" id="sortSelect" aria-label="Sort recordings">
-            <option value="newest">Newest first</option>
-            <option value="oldest">Oldest first</option>
-            <option value="title">Title A–Z</option>
+            <option value="newest">പുതിയത് ആദ്യം</option>
+            <option value="oldest">പഴയത് ആദ്യം</option>
+            <option value="title">പേര് അനുസരിച്ച്</option>
           </select>
         </div>
         <div id="recordings" class="recordings"></div>
         <div class="backend-notice">
-          <strong>Before publishing for your group</strong>
-          This is the front-end starter. Files selected here are previewed in your current browser session only; they are not uploaded to cloud storage or shared with other members yet. We’ll connect Firebase login, Firestore metadata, and secure Cloudflare R2 uploads next.
+          <strong>ഗ്രൂപ്പിനായി പ്രസിദ്ധീകരിക്കുന്നതിന് മുമ്പ്</strong>
+          ഇത് വെബ്‌സൈറ്റിന്റെ ആദ്യ രൂപമാണ്. ഇവിടെ തിരഞ്ഞെടുക്കുന്ന ഓഡിയോ ഫയലുകൾ ഇപ്പോൾ ഈ ബ്രൗസറിൽ മാത്രം കേൾക്കാം; ക്ലൗഡിലേക്ക് അപ്‌ലോഡ് ചെയ്യുകയോ മറ്റ് അംഗങ്ങളുമായി പങ്കിടുകയോ ചെയ്യുന്നില്ല. അടുത്ത ഘട്ടത്തിൽ Firebase ലോഗിൻ, ഡാറ്റാബേസ്, സുരക്ഷിതമായ Cloudflare R2 അപ്‌ലോഡ് എന്നിവ ബന്ധിപ്പിക്കും.
         </div>
       </section>
     </div>
-    <div class="footer">Voice Library · Keep recordings only when you have permission to share them.</div>
+    <div class="footer">ISSA Kuttyalm · പങ്കിടാൻ അനുമതിയുള്ള ശബ്ദ സന്ദേശങ്ങൾ മാത്രം സൂക്ഷിക്കുക.</div>
   </main>
 </div>
 
 <div class="modal-backdrop" id="uploadModal" role="dialog" aria-modal="true" aria-labelledby="uploadHeading">
   <form class="modal" id="uploadForm">
-    <h2 id="uploadHeading">Add voice notes</h2>
-    <p>Choose audio files, then add shared details. This demo previews files locally; it does not upload them.</p>
-    <div class="field"><label for="subjectSelect">Subject</label><select id="subjectSelect" required></select></div>
-    <div class="field"><label for="discussionDate">Discussion date</label><input type="date" id="discussionDate" required></div>
-    <div class="field"><label for="description">Discussion / topic (optional)</label><input id="description" maxlength="120" placeholder="e.g. Career planning and interview skills"></div>
-    <div class="field"><label for="speaker">Speaker name (optional)</label><input id="speaker" maxlength="80" placeholder="Enter name if known"></div>
-    <div class="field file-drop"><strong>Select audio files</strong><div style="color:#66736f;font-size:12px">Audio formats supported by your browser, such as .ogg, .opus, .mp3, .m4a, and .wav</div><input id="audioFiles" type="file" accept="audio/*,.ogg,.opus,.m4a" multiple required></div>
-    <div class="modal-actions"><button class="btn" type="button" id="cancelUpload">Cancel</button><button class="btn primary" type="submit">Preview files</button></div>
+    <h2 id="uploadHeading">ശബ്ദ സന്ദേശങ്ങൾ ചേർക്കുക</h2>
+    <p>ഓഡിയോ ഫയലുകൾ തിരഞ്ഞെടുക്കുക, തുടർന്ന് വിവരങ്ങൾ ചേർക്കുക. ഈ പരീക്ഷണ പതിപ്പ് ഫയലുകൾ ബ്രൗസറിൽ മാത്രം പ്ലേ ചെയ്യും; അപ്‌ലോഡ് ചെയ്യില്ല.</p>
+    <div class="field"><label for="subjectSelect">വിഷയം</label><select id="subjectSelect" required></select></div>
+    <div class="field"><label for="discussionDate">സംഭാഷണ തീയതി</label><input type="date" id="discussionDate" required></div>
+    <div class="field"><label for="description">സംഭാഷണ വിഷയം (ഐച്ഛികം)</label><input id="description" maxlength="120" placeholder="ഉദാ: കരിയർ പ്ലാനിംഗും അഭിമുഖ നൈപുണ്യങ്ങളും"></div>
+    <div class="field"><label for="speaker">സംസാരിക്കുന്നയാളുടെ പേര് (ഐച്ഛികം)</label><input id="speaker" maxlength="80" placeholder="അറിയാമെങ്കിൽ പേര് നൽകുക"></div>
+    <div class="field file-drop"><strong>ഓഡിയോ ഫയലുകൾ തിരഞ്ഞെടുക്കുക</strong><div style="color:#66736f;font-size:12px">നിങ്ങളുടെ ബ്രൗസർ പിന്തുണയ്ക്കുന്ന .ogg, .opus, .mp3, .m4a, .wav പോലുള്ള ഫയലുകൾ തിരഞ്ഞെടുക്കാം.</div><input id="audioFiles" type="file" accept="audio/*,.ogg,.opus,.m4a" multiple required></div>
+    <div class="modal-actions"><button class="btn" type="button" id="cancelUpload">റദ്ദാക്കുക</button><button class="btn primary" type="submit">ഫയലുകൾ പരിശോധിക്കുക</button></div>
   </form>
 </div>
 
 <div class="modal-backdrop" id="subjectModal" role="dialog" aria-modal="true" aria-labelledby="subjectHeading">
   <form class="modal" id="subjectForm">
-    <h2 id="subjectHeading">Create a subject</h2>
-    <p>Add a category to keep related discussions together.</p>
-    <div class="field"><label for="subjectName">Subject name</label><input id="subjectName" maxlength="60" placeholder="e.g. Communication Skills" required></div>
-    <div class="modal-actions"><button class="btn" type="button" id="cancelSubject">Cancel</button><button class="btn primary" type="submit">Add subject</button></div>
+    <h2 id="subjectHeading">പുതിയ വിഷയം ചേർക്കുക</h2>
+    <p>ബന്ധപ്പെട്ട സംഭാഷണങ്ങൾ ഒരുമിച്ച് സൂക്ഷിക്കാൻ ഒരു വിഷയം ചേർക്കുക.</p>
+    <div class="field"><label for="subjectName">വിഷയം name</label><input id="subjectName" maxlength="60" placeholder="ഉദാ: ആശയവിനിമയ നൈപുണ്യങ്ങൾ" required></div>
+    <div class="modal-actions"><button class="btn" type="button" id="cancelവിഷയം">റദ്ദാക്കുക</button><button class="btn primary" type="submit">വിഷയം ചേർക്കുക</button></div>
   </form>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (() => {
-  const initialSubjects = [
-    { id: "career", name: "Career Development", icon: "💼" },
-    { id: "education", name: "Education", icon: "📚" },
-    { id: "growth", name: "Personal Growth", icon: "🌱" },
-    { id: "other", name: "Other Topics", icon: "🗂️" }
+  const initialവിഷയങ്ങൾ = [
+    { id: "career", name: "കരിയർ വികസനം", icon: "💼" },
+    { id: "education", name: "വിദ്യാഭ്യാസം", icon: "📚" },
+    { id: "growth", name: "വ്യക്തിത്വ വികസനം", icon: "🌱" },
+    { id: "other", name: "മറ്റ് വിഷയങ്ങൾ", icon: "🗂️" }
   ];
-  let subjects = [...initialSubjects];
+  let subjects = [...initialവിഷയങ്ങൾ];
   let recordings = [];
-  let selectedSubject = "career";
+  let selectedവിഷയം = "career";
   let nextId = 1;
   let objectUrls = [];
 
   const $ = id => document.getElementById(id);
-  const subjectName = id => subjects.find(s => s.id === id)?.name || "Other Topics";
+  const subjectName = id => subjects.find(s => s.id === id)?.name || "മറ്റ് വിഷയങ്ങൾ";
   const today = new Date();
   const localDate = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,"0")}-${String(today.getDate()).padStart(2,"0")}`;
 
@@ -220,38 +221,38 @@
     clearTimeout(showToast.timer);
     showToast.timer = setTimeout(() => toast.classList.remove("show"), 3200);
   }
-  function renderSubjects() {
+  function renderവിഷയങ്ങൾ() {
     $("subjects").innerHTML = subjects.map(s => {
       const count = recordings.filter(r => r.subjectId === s.id).length;
-      return `<button type="button" class="subject-button ${selectedSubject === s.id ? "active" : ""}" data-subject="${escapeHtml(s.id)}">
+      return `<button type="button" class="subject-button ${selectedവിഷയം === s.id ? "active" : ""}" data-subject="${escapeHtml(s.id)}">
         <span class="subject-icon">${s.icon}</span><span class="subject-name">${escapeHtml(s.name)}</span><span class="count">${count}</span></button>`;
     }).join("");
     $("subjectSelect").innerHTML = subjects.map(s => `<option value="${escapeHtml(s.id)}">${escapeHtml(s.name)}</option>`).join("");
-    $("statSubjects").textContent = subjects.length;
+    $("statവിഷയങ്ങൾ").textContent = subjects.length;
   }
   function renderRecordings() {
     const query = $("searchInput").value.trim().toLowerCase();
     const sort = $("sortSelect").value;
-    let list = recordings.filter(r => r.subjectId === selectedSubject &&
+    let list = recordings.filter(r => r.subjectId === selectedവിഷയം &&
       `${r.title} ${r.description} ${r.speaker} ${r.date}`.toLowerCase().includes(query));
     list.sort((a,b) => sort === "oldest" ? a.date.localeCompare(b.date) :
       sort === "title" ? a.title.localeCompare(b.title) : b.date.localeCompare(a.date));
-    $("sectionTitle").textContent = subjectName(selectedSubject);
-    $("statCurrent").textContent = subjectName(selectedSubject);
+    $("sectionTitle").textContent = subjectName(selectedവിഷയം);
+    $("statCurrent").textContent = subjectName(selectedവിഷയം);
     $("statRecordings").textContent = recordings.length;
     if (!list.length) {
-      $("recordings").innerHTML = `<div class="empty"><strong>${query ? "No matching voice notes" : "No voice notes previewed yet"}</strong>${query ? "Try another keyword or clear the search." : "Choose “Add voice notes” to select audio files and preview them in this browser session."}</div>`;
+      $("recordings").innerHTML = `<div class="empty"><strong>${query ? "പൊരുത്തപ്പെടുന്ന ശബ്ദ സന്ദേശങ്ങളില്ല" : "ഇതുവരെ ശബ്ദ സന്ദേശങ്ങൾ ചേർത്തിട്ടില്ല"}</strong>${query ? "മറ്റൊരു വാക്ക് ഉപയോഗിച്ച് തിരയുക അല്ലെങ്കിൽ തിരച്ചിൽ മായ്ക്കുക." : "Choose “ശബ്ദ സന്ദേശങ്ങൾ ചേർക്കുക” to select audio files and preview them in this browser session."}</div>`;
       return;
     }
     $("recordings").innerHTML = list.map(r => `<article class="recording">
       <div class="audio-icon">♫</div>
       <div class="record-content">
         <div class="record-title">${escapeHtml(r.title)}</div>
-        <div class="meta"><span>${escapeHtml(r.date)}</span><span>${escapeHtml(r.speaker || "Speaker not specified")}</span><span>${escapeHtml(r.fileName)}</span></div>
+        <div class="meta"><span>${escapeHtml(r.date)}</span><span>${escapeHtml(r.speaker || "പേര് നൽകിയിട്ടില്ല")}</span><span>${escapeHtml(r.fileName)}</span></div>
         ${r.description ? `<div style="font-size:13px;color:#66736f;margin-top:5px">${escapeHtml(r.description)}</div>` : ""}
-        <audio controls preload="metadata" src="${r.url}">Your browser does not support audio playback.</audio>
+        <audio controls preload="metadata" src="${r.url}">നിങ്ങളുടെ ബ്രൗസറിൽ ഓഡിയോ പ്ലേബാക്ക് പിന്തുണയ്ക്കുന്നില്ല.</audio>
       </div>
-      <div class="record-actions"><button type="button" class="icon-btn" data-delete="${r.id}" aria-label="Remove ${escapeHtml(r.title)}" title="Remove preview">×</button></div>
+      <div class="record-actions"><button type="button" class="icon-btn" data-delete="${r.id}" aria-label="Remove ${escapeHtml(r.title)}" title="പ്രിവ്യൂ നീക്കം ചെയ്യുക">×</button></div>
     </article>`).join("");
   }
   function openModal(id) { $(id).classList.add("open"); }
@@ -259,38 +260,38 @@
   $("subjects").addEventListener("click", e => {
     const button = e.target.closest("[data-subject]");
     if (!button) return;
-    selectedSubject = button.dataset.subject;
-    renderSubjects(); renderRecordings();
+    selectedവിഷയം = button.dataset.subject;
+    renderവിഷയങ്ങൾ(); renderRecordings();
   });
   $("searchInput").addEventListener("input", renderRecordings);
   $("sortSelect").addEventListener("change", renderRecordings);
   $("uploadBtn").addEventListener("click", () => {
-    $("subjectSelect").value = selectedSubject;
+    $("subjectSelect").value = selectedവിഷയം;
     $("discussionDate").value = localDate;
     openModal("uploadModal");
   });
   $("cancelUpload").addEventListener("click", () => closeModal("uploadModal"));
-  $("newSubjectBtn").addEventListener("click", () => openModal("subjectModal"));
-  $("cancelSubject").addEventListener("click", () => closeModal("subjectModal"));
+  $("newവിഷയംBtn").addEventListener("click", () => openModal("subjectModal"));
+  $("cancelവിഷയം").addEventListener("click", () => closeModal("subjectModal"));
   $("subjectForm").addEventListener("submit", e => {
     e.preventDefault();
     const name = $("subjectName").value.trim();
     if (!name) return;
     if (subjects.some(s => s.name.toLowerCase() === name.toLowerCase())) {
-      showToast("That subject already exists."); return;
+      showToast("ഈ വിഷയം ഇതിനകം നിലവിലുണ്ട്."); return;
     }
     const id = "subject-" + Date.now();
     subjects.push({ id, name, icon: "📁" });
-    selectedSubject = id;
+    selectedവിഷയം = id;
     $("subjectName").value = "";
     closeModal("subjectModal");
-    renderSubjects(); renderRecordings();
-    showToast("Subject added for this browser session.");
+    renderവിഷയങ്ങൾ(); renderRecordings();
+    showToast("വിഷയം added for this browser session.");
   });
   $("uploadForm").addEventListener("submit", e => {
     e.preventDefault();
     const files = Array.from($("audioFiles").files || []);
-    if (!files.length) { showToast("Choose at least one audio file."); return; }
+    if (!files.length) { showToast("കുറഞ്ഞത് ഒരു ഓഡിയോ ഫയലെങ്കിലും തിരഞ്ഞെടുക്കുക."); return; }
     const subjectId = $("subjectSelect").value;
     const date = $("discussionDate").value || localDate;
     const description = $("description").value.trim();
@@ -301,15 +302,15 @@
       const cleanName = file.name.replace(/\.[^.]+$/, "").replace(/[_-]+/g, " ").trim();
       recordings.push({
         id: nextId++, subjectId, date, description, speaker,
-        title: files.length > 1 ? `Voice ${String(index + 1).padStart(2,"0")} — ${cleanName}` : (cleanName || file.name),
+        title: files.length > 1 ? `ശബ്ദം ${String(index + 1).padStart(2,"0")} — ${cleanName}` : (cleanName || file.name),
         fileName: file.name, url
       });
     });
-    selectedSubject = subjectId;
+    selectedവിഷയം = subjectId;
     $("uploadForm").reset();
     closeModal("uploadModal");
-    renderSubjects(); renderRecordings();
-    showToast(`${files.length} file(s) ready for local preview. They have not been uploaded.`);
+    renderവിഷയങ്ങൾ(); renderRecordings();
+    showToast(`${files.length} ഫയൽ(കൾ) ബ്രൗസറിൽ കേൾക്കാൻ തയ്യാറാണ്. ഇവ അപ്‌ലോഡ് ചെയ്തിട്ടില്ല.`);
   });
   $("recordings").addEventListener("click", e => {
     const button = e.target.closest("[data-delete]");
@@ -320,15 +321,15 @@
       URL.revokeObjectURL(item.url);
       objectUrls = objectUrls.filter(url => url !== item.url);
       recordings = recordings.filter(r => r.id !== id);
-      renderSubjects(); renderRecordings();
-      showToast("Preview removed.");
+      renderവിഷയങ്ങൾ(); renderRecordings();
+      showToast("പ്രിവ്യൂ നീക്കം ചെയ്തു.");
     }
   });
   document.querySelectorAll(".modal-backdrop").forEach(backdrop => {
     backdrop.addEventListener("click", e => { if (e.target === backdrop) backdrop.classList.remove("open"); });
   });
   window.addEventListener("beforeunload", () => objectUrls.forEach(URL.revokeObjectURL));
-  renderSubjects(); renderRecordings();
+  renderവിഷയങ്ങൾ(); renderRecordings();
 })();
 </script>
 </body>
