@@ -479,7 +479,7 @@
 
   window.addEventListener("beforeunload", () => objectUrls.forEach(url => URL.revokeObjectURL(url)));
   window.addEventListener("issa-auth-ready", () => loadCloudRecordings());
-  renderവിഷയങ്ങൾ();
+  renderSubjects();
   renderRecordings();
 })();
 </script>
