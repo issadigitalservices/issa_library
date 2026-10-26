@@ -332,5 +332,146 @@
   renderവിഷയങ്ങൾ(); renderRecordings();
 })();
 </script>
+
+<!-- ISSA Kuttyalm: Firebase Login -->
+<style>
+  #issa-login-panel {
+    max-width: 420px;
+    margin: 24px auto;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #222;
+  }
+
+  #issa-login-panel input,
+  #issa-login-panel button {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  #issa-login-panel input {
+    border: 1px solid #ccc;
+  }
+
+  #issa-login-panel button {
+    border: 0;
+    background: #176b45;
+    color: white;
+    cursor: pointer;
+  }
+
+  #issa-login-status {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+</style>
+
+<section id="issa-login-panel">
+  <h2>ISSA Kuttyalm</h2>
+  <p>വോയ്സ് ലൈബ്രറിയിലേക്ക് ലോഗിൻ ചെയ്യുക</p>
+
+  <form id="issa-login-form">
+    <input
+      id="issa-email"
+      type="email"
+      placeholder="Email address"
+      autocomplete="username"
+      required
+    />
+    <input
+      id="issa-password"
+      type="password"
+      placeholder="Password"
+      autocomplete="current-password"
+      required
+    />
+    <button type="submit">Login / ലോഗിൻ</button>
+  </form>
+
+  <button id="issa-logout" type="button" hidden>
+    Logout / ലോഗൗട്ട്
+  </button>
+
+  <p id="issa-login-status" role="status" aria-live="polite">
+    ലോഗിൻ ചെയ്യാൻ നിങ്ങളുടെ അക്കൗണ്ട് ഉപയോഗിക്കുക.
+  </p>
+</section>
+
+<script type="module">
+  import { initializeApp } from
+    "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
+  } from
+    "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDZYAe5F1SoEYhX8ScMsUbw-YlxlJiCuA8",
+    authDomain: "issa-kuttyalm-library.firebaseapp.com",
+    projectId: "issa-kuttyalm-library",
+    storageBucket: "issa-kuttyalm-library.firebasestorage.app",
+    messagingSenderId: "1047702594894",
+    appId: "1:1047702594894:web:147df9aa7461331a296a1f"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const form = document.getElementById("issa-login-form");
+  const emailInput = document.getElementById("issa-email");
+  const passwordInput = document.getElementById("issa-password");
+  const status = document.getElementById("issa-login-status");
+  const logoutButton = document.getElementById("issa-logout");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    status.textContent = "ലോഗിൻ പരിശോധിക്കുന്നു...";
+
+    try {
+      await signInWithEmailAndPassword(
+        auth,
+        emailInput.value.trim(),
+        passwordInput.value
+      );
+
+      passwordInput.value = "";
+    } catch (error) {
+      console.error("Firebase login failed:", error.code);
+      status.textContent =
+        "ലോഗിൻ പരാജയപ്പെട്ടു. Email, password എന്നിവ പരിശോധിക്കുക.";
+    }
+  });
+
+  logoutButton.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+    } catch {
+      status.textContent = "ലോഗൗട്ട് ചെയ്യാൻ കഴിഞ്ഞില്ല.";
+    }
+  });
+
+  onAuthStateChanged(auth, (user) => {
+    form.hidden = Boolean(user);
+    logoutButton.hidden = !user;
+
+    status.textContent = user
+      ? `ലോഗിൻ ചെയ്തു: ${user.email}`
+      : "ലോഗിൻ ചെയ്യാൻ നിങ്ങളുടെ അക്കൗണ്ട് ഉപയോഗിക്കുക.";
+  });
+</script>
+
+
+  
 </body>
 </html>
