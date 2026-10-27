@@ -542,7 +542,7 @@
     }
   });
 
-  fetch("https://soft-brook-2c8eissa-kuttyalm-voice-api.issakuttyalm.workers.dev/").then(r => r.json()).then(console.log).catch(console.error);
+  const ISSA_API_BASE = "https://soft-brook-2c8eissa-kuttyalm-voice-api.issakuttyalam.workers.dev";
   window.issaCurrentUser = null;
 
   window.issaApiRequest = async function(path,options = {}) {
