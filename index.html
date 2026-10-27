@@ -117,6 +117,520 @@
       .subject-button{padding:8px;gap:7px}
       .subject-icon{width:30px;height:30px}
     }
+
+
+/* ISSA Kuttyalam Welcome Page */
+.welcome-page {
+  max-width: 1120px;
+  margin: 30px auto;
+  padding: 0 24px 24px;
+}
+
+.welcome-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 470px;
+  padding: 30px;
+  border-radius: 26px;
+  background: linear-gradient(125deg, #10231f 0%, #124b3a 55%, #176b53 100%);
+  color: #ffffff;
+  box-shadow: 0 18px 45px rgba(16, 35, 31, 0.16);
+}
+
+.welcome-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-logo {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 15px;
+  background: rgba(255,255,255,.1);
+  font-size: 25px;
+}
+
+.welcome-brand-name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -.3px;
+}
+
+.welcome-brand-subtitle {
+  margin-top: 4px;
+  color: #b7d8cb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  padding: 58px 0 30px;
+}
+
+.welcome-label {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid rgba(194, 235, 214, .25);
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  color: #c6ead8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.welcome-content h1 {
+  margin: 22px 0 18px;
+  color: #ffffff;
+  font-size: clamp(29px, 4.5vw, 47px);
+  line-height: 1.55;
+  letter-spacing: -.6px;
+}
+
+.welcome-content > p {
+  max-width: 620px;
+  margin: 0 0 27px;
+  color: #d5e8df;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.welcome-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #105440;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.welcome-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.18);
+}
+
+.welcome-cta:focus-visible {
+  outline: 3px solid #a8e6c5;
+  outline-offset: 4px;
+}
+
+.welcome-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: #c6dfd3;
+  font-size: 12px;
+}
+
+.welcome-note span {
+  display: grid;
+  place-items: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: rgba(183, 216, 203, .16);
+  color: #b7e6cc;
+}
+
+.welcome-decoration {
+  position: absolute;
+  z-index: 1;
+  width: 350px;
+  height: 350px;
+  right: -65px;
+  bottom: -95px;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.sound-circle {
+  position: absolute;
+  border: 1px solid rgba(207, 238, 222, .15);
+  border-radius: 50%;
+}
+
+.sound-circle-one {
+  width: 210px;
+  height: 210px;
+}
+
+.sound-circle-two {
+  width: 290px;
+  height: 290px;
+}
+
+.sound-icon {
+  width: 125px;
+  height: 125px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 36px;
+  background: rgba(255,255,255,.07);
+  color: rgba(255,255,255,.7);
+  font-size: 76px;
+  transform: rotate(-12deg);
+}
+
+.welcome-features {
+  padding: 46px 0 20px;
+}
+
+.welcome-section-heading {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.welcome-section-heading > span {
+  color: #176b53;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.welcome-section-heading h2 {
+  margin: 12px 0;
+  color: var(--ink);
+  font-size: clamp(22px, 3vw, 29px);
+  line-height: 1.6;
+}
+
+.welcome-section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.welcome-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.welcome-feature-card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.welcome-feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(16,35,31,.07);
+}
+
+.welcome-feature-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #eaf5ef;
+  font-size: 23px;
+}
+
+.welcome-feature-card h3 {
+  margin: 17px 0 9px;
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.welcome-feature-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.welcome-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 22px 0 5px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .welcome-page {
+    margin: 16px auto;
+    padding: 0 14px 18px;
+  }
+
+  .welcome-hero {
+    min-height: auto;
+    padding: 22px;
+    border-radius: 21px;
+  }
+
+  .welcome-content {
+    padding: 48px 0 20px;
+  }
+
+  .welcome-content h1 {
+    font-size: 29px;
+  }
+
+  .welcome-content > p {
+    font-size: 14px;
+  }
+
+  .welcome-cta {
+    width: 100%;
+  }
+
+  .welcome-decoration {
+    width: 170px;
+    height: 170px;
+    right: -70px;
+    bottom: -55px;
+    opacity: .5;
+  }
+
+  .sound-circle-one {
+    width: 115px;
+    height: 115px;
+  }
+
+  .sound-circle-two {
+    width: 160px;
+    height: 160px;
+  }
+
+  .sound-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 20px;
+    font-size: 43px;
+  }
+
+  .welcome-features {
+    padding-top: 34px;
+  }
+
+  .welcome-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .welcome-feature-card {
+    padding: 19px;
+  }
+
+  .welcome-footer {
+    flex-direction: column;
+  }
+}
+
+
+/* ISSA Library - Professional Interface */
+#libraryPage {
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+
+#libraryPage .hero {
+  padding: 26px;
+  background: linear-gradient(135deg, #10231f, #176b53);
+  color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(16, 35, 31, 0.12);
+}
+
+#libraryPage .hero h1 {
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+#libraryPage .hero .sub {
+  color: #d5e8df;
+  line-height: 1.9;
+}
+
+#libraryPage .stats {
+  gap: 14px;
+  margin: 20px 0 24px;
+}
+
+#libraryPage .stat {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: 0 4px 15px rgba(16, 35, 31, 0.04);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#libraryPage .stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(16, 35, 31, 0.08);
+}
+
+#libraryPage .panel {
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(16, 35, 31, 0.04);
+}
+
+#libraryPage .subject-button {
+  border-radius: 12px;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+#libraryPage .recording {
+  border-radius: 15px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+#libraryPage .recording:hover {
+  border-color: #b5d8c8;
+  box-shadow: 0 5px 16px rgba(16, 35, 31, 0.06);
+}
+
+#libraryPage input,
+#libraryPage select,
+#libraryPage textarea {
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  #libraryPage {
+    padding-top: 14px;
+  }
+
+  #libraryPage .hero {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  #libraryPage .stats {
+    gap: 10px;
+    margin: 16px 0;
+  }
+
+  #libraryPage .stat {
+    padding: 14px;
+  }
+
+  #libraryPage .panel {
+    border-radius: 15px;
+  }
+}
+
+
+/* Search and Recording Card Improvements */
+#libraryPage .toolbar {
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+#libraryPage .search-row {
+  gap: 10px;
+}
+
+#libraryPage .search-row input {
+  min-height: 46px;
+  padding: 12px 15px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+#libraryPage .search-row input:focus {
+  outline: none;
+  border-color: #176b53;
+  box-shadow: 0 0 0 3px rgba(23, 107, 83, .12);
+}
+
+#libraryPage .filter-select {
+  min-height: 44px;
+  padding: 10px 12px;
+}
+
+#libraryPage .recording {
+  padding: 17px;
+  gap: 13px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+#libraryPage .audio-icon {
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #eaf5ef;
+  color: #105440;
+}
+
+#libraryPage .record-title {
+  font-weight: 750;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+#libraryPage .record-actions button {
+  min-height: 38px;
+  padding: 9px 13px;
+  border-radius: 9px;
+}
+
+#libraryPage .recording audio {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 700px) {
+  #libraryPage .toolbar {
+    align-items: stretch;
+  }
+
+  #libraryPage .search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #libraryPage .search-row input,
+  #libraryPage .filter-select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #libraryPage .recording {
+    padding: 13px;
+    gap: 10px;
+  }
+
+  #libraryPage .record-actions {
+    flex-wrap: wrap;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -124,9 +638,90 @@
   <header class="topbar">
     <div class="brand"><div class="brand-mark">♫</div><span>ISSA Kuttyalm</span></div>
     <div class="top-note">പ്രധാനപ്പെട്ട സംഭാഷണങ്ങളുടെ ശേഖരം<br>വിഷയങ്ങൾ അനുസരിച്ച് ക്രമീകരിച്ച ശബ്ദ സന്ദേശങ്ങൾ</div>
+
+<button id="homeButton" onclick="openWelcomePage()" style="display:none;background:#ffffff;color:#105440;border:0;padding:9px 14px;border-radius:9px;font-weight:700;cursor:pointer;white-space:nowrap;">
+  🏠 Home
+</button>
+
   </header>
 
-  <main class="container">
+
+
+<section id="welcomePage" class="welcome-page">
+  <div class="welcome-hero">
+    <div class="welcome-brand">
+      <div class="welcome-logo">🎙️</div>
+      <div>
+        <div class="welcome-brand-name">ISSA Kuttyalam</div>
+        <div class="welcome-brand-subtitle">DIGITAL VOICE LIBRARY</div>
+      </div>
+    </div>
+
+    <div class="welcome-content">
+      <span class="welcome-label">ISSA KNOWLEDGE LIBRARY</span>
+
+      <h1>അറിവുകൾ കേൾക്കാം,<br>അറിവുകൾ പങ്കുവെക്കാം</h1>
+
+      <p>
+        ഇസ്ലാമിക അറിവുകളും പ്രഭാഷണങ്ങളും ശബ്ദ സന്ദേശങ്ങളും
+        വിഷയങ്ങൾ അനുസരിച്ച് കണ്ടെത്താനും എപ്പോൾ വേണമെങ്കിലും
+        വീണ്ടും കേൾക്കാനും ഒരുക്കിയ ഡിജിറ്റൽ ലൈബ്രറി.
+      </p>
+
+      <button class="welcome-cta" onclick="openLibraryPage()">
+        ലൈബ്രറിയിലേക്ക് പോകാം
+        <span aria-hidden="true">→</span>
+      </button>
+
+      <div class="welcome-note">
+        <span>✓</span> വിഷയങ്ങൾ അനുസരിച്ച് ക്രമീകരിച്ച ശബ്ദ സന്ദേശങ്ങൾ
+      </div>
+    </div>
+
+    <div class="welcome-decoration" aria-hidden="true">
+      <div class="sound-circle sound-circle-one"></div>
+      <div class="sound-circle sound-circle-two"></div>
+      <div class="sound-icon">♫</div>
+    </div>
+  </div>
+
+  <div class="welcome-features">
+    <div class="welcome-section-heading">
+      <span>EXPLORE THE LIBRARY</span>
+      <h2>നിങ്ങൾക്ക് ഇവിടെ എന്തെല്ലാം ചെയ്യാം?</h2>
+      <p>ആവശ്യമായ ശബ്ദ സന്ദേശങ്ങൾ എളുപ്പത്തിൽ കണ്ടെത്തൂ.</p>
+    </div>
+
+    <div class="welcome-feature-grid">
+      <article class="welcome-feature-card">
+        <div class="welcome-feature-icon">📚</div>
+        <h3>വിഷയങ്ങൾ</h3>
+        <p>വിവിധ വിഷയങ്ങളിലുള്ള ശബ്ദ സന്ദേശങ്ങൾ ക്രമമായി കണ്ടെത്താം.</p>
+      </article>
+
+      <article class="welcome-feature-card">
+        <div class="welcome-feature-icon">🔎</div>
+        <h3>എളുപ്പത്തിൽ തിരയാം</h3>
+        <p>ആവശ്യമായ റെക്കോർഡിങ്ങുകൾ തിരഞ്ഞ് വേഗത്തിൽ കണ്ടെത്താം.</p>
+      </article>
+
+      <article class="welcome-feature-card">
+        <div class="welcome-feature-icon">🎧</div>
+        <h3>വീണ്ടും കേൾക്കാം</h3>
+        <p>ലഭ്യമായ ശബ്ദ സന്ദേശങ്ങൾ സൗകര്യപ്രദമായി വീണ്ടും കേൾക്കാം.</p>
+      </article>
+    </div>
+  </div>
+
+  <footer class="welcome-footer">
+    <span>ISSA Kuttyalam</span>
+    <span>അറിവുകൾ • ഓർമ്മകൾ • പങ്കുവെക്കൽ</span>
+  </footer>
+</section>
+
+
+<main id="libraryPage" class="container" style="display:none;">
+
     <section class="hero">
       <div>
         <h1>ISSA ഗ്രൂപ്പിലെ ആശയങ്ങൾ ഇനി എളുപ്പത്തിൽ കണ്ടെത്താം.</h1>
@@ -165,7 +760,7 @@
           </select>
         </div>
         <div id="recordings" class="recordings"></div>
-        
+
       </section>
     </div>
     <div class="footer">ISSA Kuttyalm · പങ്കിടാൻ അനുമതിയുള്ള ശബ്ദ സന്ദേശങ്ങൾ മാത്രം സൂക്ഷിക്കുക.</div>
@@ -481,7 +1076,7 @@
 })();
 </script>
 
-<section id="issa-login-panel">
+<section id="issa-login-panel" style="display:none;">
   <h2>ISSA Kuttyalm</h2>
   <p>വോയ്സ് ലൈബ്രറിയിലേക്ക് ലോഗിൻ ചെയ്യുക</p>
   <form id="issa-login-form">
@@ -567,11 +1162,34 @@
     logoutButton.hidden = !user;
     status.textContent = user
       ? `ലോഗിൻ ചെയ്തു: ${user.email}`
-      : "ലോഗിൻ ചെയ്യാൻ നിങ്ങളുടെ അക്കൗണ്ട് ഉപയോഗിക്കുക.";
+      : "ലോഗിൻ ചെയ്യാൻ നിങ്ങളുടെ അക്കൗണ്ട് ഉപയോഗിക്കുക Ok. ";
     window.dispatchEvent(new CustomEvent("issa-auth-ready",{
       detail:{signedIn:Boolean(user)}
     }));
   });
+</script>
+
+
+<script>
+
+
+function openLibraryPage() {
+  document.getElementById('welcomePage').style.display = 'none';
+  document.getElementById('libraryPage').style.display = 'block';
+  document.getElementById('homeButton').style.display = 'inline-block';
+  document.getElementById('issa-login-panel').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+
+function openWelcomePage() {
+  document.getElementById('libraryPage').style.display = 'none';
+  document.getElementById('welcomePage').style.display = 'block';
+  document.getElementById('homeButton').style.display = 'none';
+  document.getElementById('issa-login-panel').style.display = 'none';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 </script>
 </body>
 </html>
