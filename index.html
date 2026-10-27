@@ -145,7 +145,7 @@
       <aside class="panel">
         <h2>വിഷയങ്ങൾ തിരഞ്ഞെടുക്കുക</h2>
         <nav class="subjects" id="subjects" aria-label="വിഷയങ്ങൾ"></nav>
-        <div class="privacy-note">🔒 ലോഗിൻ ചെയ്ത അംഗങ്ങൾക്ക് മാത്രം. അംഗീകൃത ഇമെയിൽ വിലാസങ്ങൾ Cloudflare Worker-ൽ അനുവദിച്ചിരിക്കണം.</div>
+        <div class="privacy-note">🔒 ലോഗിൻ ചെയ്ത അംഗങ്ങൾക്ക് മാത്രം.</div>
       </aside>
 
       <section class="panel main-panel">
@@ -165,10 +165,7 @@
           </select>
         </div>
         <div id="recordings" class="recordings"></div>
-        <div class="backend-notice">
-          <strong>സ്വകാര്യ ക്ലൗഡ് ലൈബ്രറി</strong>
-          ശബ്ദ സന്ദേശങ്ങൾ Cloudflare R2-ൽ സൂക്ഷിക്കുന്നു. ഓഡിയോ കേൾക്കാനും ചേർക്കാനും അംഗീകൃത ലോഗിൻ ആവശ്യമാണ്. പങ്കിടാൻ അനുമതിയുള്ള റെക്കോർഡിങ്ങുകൾ മാത്രം അപ്‌ലോഡ് ചെയ്യുക.
-        </div>
+        
       </section>
     </div>
     <div class="footer">ISSA Kuttyalm · പങ്കിടാൻ അനുമതിയുള്ള ശബ്ദ സന്ദേശങ്ങൾ മാത്രം സൂക്ഷിക്കുക.</div>
@@ -178,7 +175,7 @@
 <div class="modal-backdrop" id="uploadModal" role="dialog" aria-modal="true" aria-labelledby="uploadHeading">
   <form class="modal" id="uploadForm">
     <h2 id="uploadHeading">ശബ്ദ സന്ദേശങ്ങൾ ചേർക്കുക</h2>
-    <p>ഓഡിയോ ഫയലുകൾ തിരഞ്ഞെടുക്കുക. ഓരോ ഫയലും സ്വകാര്യ ക്ലൗഡ് സ്റ്റോറേജിലേക്ക് അപ്‌ലോഡ് ചെയ്യും. ഒരു ഫയലിന് പരമാവധി 100 MB.</p>
+    <p>ഓഡിയോ ഫയലുകൾ തിരഞ്ഞെടുക്കുക</p>
     <div class="field"><label for="subjectSelect">വിഷയം</label><select id="subjectSelect" required></select></div>
     <div class="field"><label for="discussionDate">സംഭാഷണ തീയതി</label><input type="date" id="discussionDate" required></div>
     <div class="field"><label for="description">സംഭാഷണ വിഷയം (ഐച്ഛികം)</label><input id="description" maxlength="120" placeholder="ഉദാ: കരിയർ പ്ലാനിംഗും അഭിമുഖ നൈപുണ്യങ്ങളും"></div>
